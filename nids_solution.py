@@ -104,7 +104,6 @@ from lightgbm import LGBMClassifier
 
 results = {}
 
-# --- Model 1: Random Forest ---
 print("\n--- Training Model 1: Random Forest ---")
 rf = RandomForestClassifier(
     n_estimators=300,
@@ -119,7 +118,6 @@ rf_f1 = f1_score(y_test, rf_pred, average='macro')
 results['Random Forest'] = (rf_f1, rf_pred)
 print(f"Random Forest macro F1: {rf_f1:.4f}")
 
-# --- Model 2: LightGBM ---
 print("\n--- Training Model 2: LightGBM ---")
 lgbm = LGBMClassifier(
     n_estimators=500,
@@ -138,7 +136,6 @@ lgbm_f1 = f1_score(y_test, lgbm_pred, average='macro')
 results['LightGBM'] = (lgbm_f1, lgbm_pred)
 print(f"LightGBM macro F1: {lgbm_f1:.4f}")
 
-# --- Model 3: XGBoost ---
 print("\n--- Training Model 3: XGBoost ---")
 xgb = XGBClassifier(
     n_estimators=500,
