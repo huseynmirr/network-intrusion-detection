@@ -1,9 +1,5 @@
 # Network Intrusion Detection — Assignment Report
 
-**Authors:** Huseyn Mirjavadov, Ulvi Balashov
-
----
-
 ## 1. Introduction
 
 The goal of this assignment was to build a machine learning model that classifies network connections into five categories: Normal, DoS, Probe, R2L, and U2R. The main challenge is that the dataset is heavily imbalanced — U2R has only 52 training examples while Normal has over 67,000. The baseline Random Forest model achieves a macro F1-score of around 0.47, mostly because it almost completely fails to detect R2L and U2R attacks. Our goal was to beat that.
